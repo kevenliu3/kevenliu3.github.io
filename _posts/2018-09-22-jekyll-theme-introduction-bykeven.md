@@ -1,52 +1,34 @@
 ---
 layout: post
-title: 博客
+title: jeky环境搭建
 date: 2018-09-23
-tags: jekyll theme blog
+tags: 环境搭建
 ---
 
 
-
-
-
 ```
-theme - jekyll theme - jekyll - gem - ruby(devkit)
-
-jekyll server - bundler && other(error will warning you)
+theme -> jekyll theme -> jekyll -> gem -> ruby(devkit)
+jekyll server -> bundler && other(error will warning you)
 ```
 
-install ruby(with devkit):ruby installer官网
 
-install jekyll: gem install jekyll 这里一定要用系统自带的cmd安装，如果用第三方shell终端，例如power shell，容易出现下面错误：
-
-`this problem is probably due to using incompatible versions of the cygwin dll `
+1. install ruby(with devkit):ruby installer官网
+> install jekyll: gem install jekyll 这里一定要用系统自带的cmd安装，如果用第三方shell终端，例如power shell，容易出现下面错误：
 
 
-
-cd 到blog的根目录，jekyll server
-
-可能会遇到下面错误：
+`this problem is probably due to using incompatible versions of the cygwin dll `     
+2. cd 到blog的根目录，jekyll server，可能会遇到下面错误：
 
 ````
 C:/Ruby25-x64/lib/ruby/2.5.0/rubygems/core_ext/kernel_require.rb:59:in `require': cannot load such file -- bundler (LoadError)
 ````
+这里我们采取策略：cannot load such file xxx 我们就gem install xxx       
 
-这里我们采取策略：cannot load such file xxx 我们就gem install xxx
+3. 最后jckyll server运行起来后，如下图
+  ![53768721270](C:\Users\ADMINI~1\AppData\Local\Temp\1537687212706.png)
+  然后访问http://127.0.0.1:4000/即为你的blog。
 
-
-
-最后jckyll server运行起来后，如下图
-
-![53768721270](C:\Users\ADMINI~1\AppData\Local\Temp\1537687212706.png)
-
-
-
-然后访问http://127.0.0.1:4000/即为你的blog。
-
-
-
-
-
+4. jckyll server遇到的错误
 ```
 C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/bundler-1.16.5/lib/bundler/runtime.rb:313:in `check_for_activated_spec!': You have already activated rouge 3.2.1, but your Gemfile requires rouge 2.2.1. Prepending `bundle exec` to your command may solve this. (Gem::LoadError)
         from C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/bundler-1.16.5/lib/bundler/runtime.rb:31:in `block in setup'
@@ -61,18 +43,10 @@ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/bundler-1.16.5/lib/bundler/runtime.rb:313
         from C:/Ruby25-x64/bin/jekyll:23:in `<main>'
 ```
 
-
-
-卸载掉不需要的3.2.1
-
+5. 卸载掉不需要的3.2.1
 ![53770899930](C:\Users\ADMINI~1\AppData\Local\Temp\1537708999300.png)
-
-
-
-
-
 ```
- `block in verify_gemfile_dependencies_are_found!': Could not find gem 'rake (~> 10.0) x64-mingw32' in any of the gem sources listed in your Gemfile. (Bundler::GemNotFound)
+`block in verify_gemfile_dependencies_are_found!': Could not find gem 'rake (~> 10.0) x64-mingw32' in any of the gem sources listed in your Gemfile. (Bundler::GemNotFound)
 ```
 
 ```
@@ -81,4 +55,3 @@ if you still get the error then put this into your gemfile.
 
 gem 'rake', '0.8.7'
 ```
-
