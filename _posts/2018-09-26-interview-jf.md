@@ -7,6 +7,7 @@ tags: Interview
 
 ##### 工作职责
 1. 负责android的系统以及App的开发和维护;
+
 ```java
 * audioprofile：标准、静音、户外、震动
 ** 铃声设置：type(music ringtone alarm notification system)
