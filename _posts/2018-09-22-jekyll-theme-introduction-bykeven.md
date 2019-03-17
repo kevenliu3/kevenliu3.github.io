@@ -24,9 +24,7 @@ C:/Ruby25-x64/lib/ruby/2.5.0/rubygems/core_ext/kernel_require.rb:59:in `require'
 ````
 这里我们采取策略：cannot load such file xxx 我们就gem install xxx       
 
-3. 最后jckyll server运行起来后，如下图
-  ![53768721270](C:\Users\ADMINI~1\AppData\Local\Temp\1537687212706.png)
-  然后访问http://127.0.0.1:4000/即为你的blog。
+3. 最后jckyll server运行起来后，访问http://127.0.0.1:4000/即为你的blog。
 
 4. jckyll server遇到的错误
 ```
@@ -44,7 +42,6 @@ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/bundler-1.16.5/lib/bundler/runtime.rb:313
 ```
 
 5. 卸载掉不需要的3.2.1
-![53770899930](C:\Users\ADMINI~1\AppData\Local\Temp\1537708999300.png)
 ```
 `block in verify_gemfile_dependencies_are_found!': Could not find gem 'rake (~> 10.0) x64-mingw32' in any of the gem sources listed in your Gemfile. (Bundler::GemNotFound)
 ```
